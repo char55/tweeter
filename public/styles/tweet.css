@@ -3,8 +3,9 @@
   margin-right: 2em;
   background: white;
   border: 1px solid lightGray;
-  border-radius: 5px;
-  margin-bottom: 2em;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 1em;
 }
 
 .tweet:hover {
@@ -27,14 +28,14 @@
 .tweet .icon {
   width: 40px;
   height: 40px;
-  filter: saturate(90%);
+  filter: saturate(80%);
 }
 
 .tweet:hover .icon {
-  filter: saturate(150%);
+  filter: saturate(130%);
 }
 
-.tweet .userhead {
+.tweet .flexbox {
   display: flex;
   justify-content: space-between;
 }
@@ -70,5 +71,13 @@
   padding-top: .5em;
   padding-bottom: 1em;
   font-size: 80%
+}
+
+.tweet .flags {
+  visibility: hidden;
+}
+
+.tweet:hover .flags {
+  visibility: visible;
 }
 

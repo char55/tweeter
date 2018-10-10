@@ -20,3 +20,24 @@
 #nav-bar .header {
   font-size: 200%
 }
+
+#toggleButton {
+  position: absolute;
+  right: 0em;
+  top: 0em;
+  width: 100px;
+  height: 60px;
+  margin-right: 2em;
+  margin-top: 10px;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  background-color: #e8fdff;
+  color: #00a087;
+  border: 1px solid black;
+
+}
+
+#toggleButton:hover {
+  background-color: white;
+  color: black;
+}

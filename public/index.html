@@ -9,13 +9,15 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
-    <link rel="stylesheet" href="/styles/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -27,30 +29,38 @@
   </head>
 
   <body>
-
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <div><button id="toggleButton"><i class="far fa-edit"></i> Compose</button></div>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+        <!-- new tweet to compose -->
         <section class="new-tweet">
           <h2>Compose Tweet</h2>
-          <form method="POST" action="/tweets/">
+          <form method="POST" id="submitNew" action="/tweets">
             <textarea name="text" placeholder="What are you humming about?"></textarea>
-            <input type="submit" value="Tweet">
+            <input type="submit"  value="Tweet">
             <span class="counter">140</span>
+  <!-- <span class="popuptext" id="myPopup">Error!</span> -->
           </form>
-        </section>
 
+        </section>
+    <section>
+      <div class="error">
+        error message
+      </div>
+    </section>
+
+      <!-- Tweets container where jquery built tweet will be placed -->
         <section id="tweet-container">
-
         </section>
-
-
     </main>
+
 
   </body>
 </html>
+

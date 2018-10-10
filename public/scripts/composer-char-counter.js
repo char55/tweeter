@@ -1,14 +1,14 @@
 console.log('present')
 
-// let i = 140;
-let count;
-let total;
+const maxAmt = 140;
 $(document).ready(function() {
-  const $counter = $('span.counter')
+  // const $counter = $('span.counter')
   $("textarea").on('keyup', function() {
-
+    let count;
+    let total;
+    const $counter = $(this).siblings('.counter')
     count = $(this).val().length;
-    total = 140 - count;
+    total = maxAmt - count;
     if(total < 0) {
       $counter.css({'color':'red'});
     } else {
