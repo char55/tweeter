@@ -4,8 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from tweets.json
-
 
 $(document).ready(function() {
 const data = [
@@ -58,11 +56,11 @@ const data = [
 const tweetData = {
   "user": {
     "name": "Newton",
-    "avatars": {
-      "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-      "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-      "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
-    },
+      "avatars": {
+        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
+        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
+        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
+      },
     "handle": "@SirIsaac"
   },
   "content": {
@@ -78,36 +76,40 @@ const createTweetElement = function (obj) {
 
 
 const username = obj.user.name;
-const avatar = obj.user.large;
-const handle = obj.handle;
-const tweetContent = obj.content;
+const avatar = obj.user.avatars.large;
+const handle = obj.user.handle;
+const tweetContent = obj.content.text;
 const time = obj.created_at;
 
-
+console.log(handle)
 
 const format = `
             <article class="tweet">
+
               <header>
                 <div class=userhead>
                   <div class="username">
                     <span>
-                      <img class="icon" src="">
+                        <img class="icon" src="">
                     </span>
-                    <span class=usernamePosition>
+                    <span class="usernamePosition">
                     </span>
                   </div>
+
                   <div class="handle">
                   </div>
                 </div>
               </header>
-              <section class"content">
+
+              <section class="content">
               </section>
+
               <footer class="time">
                 Date
               </footer>
             </article>`;
 
-var $tweet = $(format);
+const $tweet = $(format);
 
 $tweet.find('.icon').attr('src', avatar);
 $tweet.find('.usernamePosition').text(username);
