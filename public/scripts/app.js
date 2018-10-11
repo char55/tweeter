@@ -91,6 +91,7 @@ $(document).ready(function() {
           $('#tweet-container').prepend(createTweetElement(newTweet))
           $('.error').css("visibility", "hidden")
           $('#submitNew')[0].reset()
+          $('.counter').html("140")
         });
     }
   });

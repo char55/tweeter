@@ -13,13 +13,11 @@ module.exports = function makeDataHelpers(db) {
       //   db.tweets.push(newTweet);
       // });
       db.collection("tweets").insertOne(newTweet)
-        callback(null, true);
-      console.log("I'm alive! save it")
+      callback(null, true);
     },
 
     // Get all tweets in `db`, sorted by newest first
     getTweets: function(callback) {
-      console.log("I'm alive! get it")
       const sortNewestFirst = (b, a) => a.created_at - b.created_at;
       db.collection("tweets").find().toArray((err, tweets) => {
         if (err) {
