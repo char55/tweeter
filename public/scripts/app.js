@@ -20,7 +20,6 @@ $(document).ready(function() {
                         <span class="usernamePosition">
                         </span>
                       </div>
-
                       <div class="handle">
                       </div>
                     </div>
@@ -38,18 +37,18 @@ $(document).ready(function() {
                       <i class="fas fa-heart"></i>
                     </span>
                   </footer>
+
                 </article>`;
 
     const $tweet = $(format);
-
     $tweet.find('.icon').attr('src', avatar);
     $tweet.find('.usernamePosition').text(username);
     $tweet.find('.handle').text(handle);
     $tweet.find('.content').text(tweetContent);
     $tweet.find('.time').text(time);
 
-    return $tweet
-  }
+    return $tweet;
+  };
 
 
   function renderTweets(tweetsArray) {
@@ -60,6 +59,7 @@ $(document).ready(function() {
       $('#tweet-container').append(createTweetElement(el))
     });
   }
+
 
   // renders the tweets already in the server
   $.ajax('/tweets', {method: 'GET'})
@@ -96,12 +96,4 @@ $(document).ready(function() {
     }
   });
 
-
 });
-
-
-
-
-
-
-

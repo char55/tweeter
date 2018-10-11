@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/error.css" type="text/css" />
 
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -26,6 +27,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -38,29 +40,29 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <!-- new tweet to compose -->
+      <!-- new tweet to compose -->
         <section class="new-tweet">
           <h2>Compose Tweet</h2>
           <form method="POST" id="submitNew" action="/tweets">
             <textarea name="text" placeholder="What are you humming about?"></textarea>
             <input type="submit"  value="Tweet">
             <span class="counter">140</span>
-  <!-- <span class="popuptext" id="myPopup">Error!</span> -->
           </form>
-
         </section>
-    <section>
-      <div class="error">
-        error message
-      </div>
-    </section>
 
-      <!-- Tweets container where jquery built tweet will be placed -->
+      <!-- Error message - hidden unless provoked -->
+        <section>
+          <div class="error">
+            error message
+          </div>
+        </section>
+
+      <!-- Tweets container where jquery-built tweet will be placed -->
         <section id="tweet-container">
         </section>
     </main>
 
-
   </body>
+
 </html>
 
