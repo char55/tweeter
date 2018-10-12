@@ -22,7 +22,21 @@ This repository is the starter code for the project: Students will fork and clon
 - Nodemon
 
 ## Final Product
-![shortdescript](urlofpic)
+
+![Website](https://github.com/char55/tweeter/blob/master/docs/Website.png?raw=true)
+
+![Compose Tweet will toggle when you click compose](https://github.com/char55/tweeter/blob/master/docs/Compose%20Tweet%20will%20toggle%20when%20you%20click%20compose.png?raw=true)
+
+![composing a tweet alters character count](https://github.com/char55/tweeter/blob/master/docs/composing%20a%20tweet%20alters%20character%20count.png?raw=true)
+
+![Empty tweets are not acceptable](https://raw.github.com/char55/tweeter/master/docs/Empty%20tweets%20are%20not%20acceptable.png)
+
+![Tweets over 140 characters are not acceptable for submission](https://github.com/char55/tweeter/blob/master/docs/Tweets%20over%20140%20characters%20are%20not%20acceptable%20for%20submission.png?raw=true)
+
+![Tweets over 140 chracters will cause the counter to turn red and negative](https://github.com/char55/tweeter/blob/master/docs/Tweets%20over%20140%20chracters%20will%20cause%20the%20counter%20to%20turn%20red%20and%20negative.png?raw=true)
+
+![Hovering over a tweet will 'highlight' it](https://github.com/char55/tweeter/blob/master/docs/Hovering%20over%20a%20tweet%20will%20'highlight'%20it.png?raw=true)
+
 
 ## Website abilities
 
