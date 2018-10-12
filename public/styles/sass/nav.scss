@@ -1,0 +1,45 @@
+$banner: #00a087
+$button: ##e8fdff
+
+#nav-bar {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background-color: $banner;
+  color: $button;
+  height: 80px;
+  width: 100%;
+  padding-top: 0;
+  padding-right: 2em;
+  padding-bottom: 0;
+  padding-left: 2em;
+}
+
+#nav-bar .logo {
+  width: 80px;
+  height: 80px;
+}
+
+#nav-bar .header {
+  font-size: 200%
+}
+
+#toggleButton {
+  position: absolute;
+  right: 0em;
+  top: 0em;
+  width: 100px;
+  height: 60px;
+  margin-right: 2em;
+  margin-top: 10px;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  background-color: $button;
+  color: $banner;
+  border: 1px solid black;
+}
+
+#toggleButton:hover {
+  background-color: white;
+  color: black;
+}
