@@ -32,8 +32,8 @@ This repository is the starter code for the project: Students will fork and clon
 - The character counter turns red when the user inputs over 140 characters, displaying a negative number of how many need to be removed.
 - A simple error message appears if the user attempts to post an invalid sized message.
 - Hovering over a tweet will "highlight" it; certain features alter slightly to draw attention to it.
-- Hovering over a tweet will allow the "likes" to appear (heart shaped icon with number count)
-- To "like" a tweet, the user must simply click on the "like" icon; the "like" count will instantly increase
+- Hovering over a tweet will allow the "flag", "retweet", and "likes" to appear (heart shaped icon with number count)
+
 
 - There is a "Compose" button at the top right of the screen which will toggle the "Compose Tweet" input.  One click to hide it, one click to display it.
 - Users can compose a tweet, post the tweet, and see it posted without having to refresh the page.
@@ -44,6 +44,5 @@ This repository is the starter code for the project: Students will fork and clon
     - User's handler
     - Message content
     - Time at which the message was made
-    - The number of likes the tweet has received
 
 The tweets are stored in a database (MongoDB).
