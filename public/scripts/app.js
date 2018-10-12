@@ -55,9 +55,6 @@ $(document).ready(function() {
 
 
   function renderTweets(tweetsArray) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
     tweetsArray.forEach(function(el) {
       $('#tweet-container').append(createTweetElement(el))
     });
