@@ -1,3 +1,5 @@
 node_modules/
 .env
 .DS_Store
+/public/styles/sass/
+/server/lib/util/in-memory-db.js
