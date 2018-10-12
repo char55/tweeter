@@ -22,7 +22,17 @@ module.exports = function makeDataHelpers(db) {
         }
         callback(null, tweets.sort(sortNewestFirst));
       });
-    }
+    },
+
+    // // update
+    // updateTweets: function(date, likesUpdated, callback) {
+
+    //   // db.collection("tweets").find({"created_at": time});
+    //   db.collection("tweets").updateOne(
+    //     {"created_at" : date},
+    //     { $set: {"likes": likesUpdated} });
+
+    // }  ***CONSIDER PUTTING IT IN INDEX.JS
 
   };
 };

@@ -7,6 +7,7 @@ $(document).ready(function() {
     const handle = obj.user.handle;
     const tweetContent = obj.content.text;
     const time = obj.created_at;
+    const likes = obj.likes;
 
     const format = `
                 <article class="tweet">
@@ -34,7 +35,9 @@ $(document).ready(function() {
                     <span class="flags">
                       <i class="fas fa-flag"></i>
                       <i class="fas fa-retweet"></i>
-                      <i class="fas fa-heart"></i>
+                      <span class="click-for-likes">
+                        <i class="fas fa-heart" ></i><span class="likes"></span>
+                      </span>
                     </span>
                   </footer>
 
@@ -46,9 +49,19 @@ $(document).ready(function() {
     $tweet.find('.handle').text(handle);
     $tweet.find('.content').text(tweetContent);
     $tweet.find('.time').text(time);
+    $tweet.find('.likes').text(likes);
 
     return $tweet;
   };
+
+  $('#tweet-container').on("click", ".click-for-likes", function() {
+    const liking = Number($(this).find('.likes').text())+1;
+    $(this).find('.likes').text(liking);
+
+    const time = $(this).find('.time').text(); // unique to the tweet
+    db.collection("tweets").find({created_at: time})
+
+  });
 
 
   function renderTweets(tweetsArray) {
@@ -61,13 +74,7 @@ $(document).ready(function() {
   }
 
 
-  // renders the tweets already in the server
-  $.ajax('/tweets', {method: 'GET'})
-    .then(function(newTweet) {
-      renderTweets(newTweet)
-    });
-
-
+  // toggles "compose tweet"
   $('button').click(function() {
     $('.new-tweet').slideToggle("slow")
     $('textarea').focus()
@@ -75,10 +82,17 @@ $(document).ready(function() {
   });
 
 
+  // renders the tweets already in the server
+  $.ajax('/tweets', {method: 'GET'})
+    .then(function(newTweet) {
+      renderTweets(newTweet)
+    });
+
+
+  // new tweet submitted
   $( "#submitNew" ).submit(function( event ) {
     event.preventDefault();
-    let $tweetContent = $(this).serialize()
-
+    const $tweetContent = $(this).serialize()
     if($tweetContent.length <= 5) {
       $('.error').css("visibility", "visible")
       $('.error').html("Brevity is the soul of wit \nbut yours is nonexistent")
