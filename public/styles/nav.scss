@@ -1,9 +1,12 @@
+$banner: #00a087
+$button: ##e8fdff
+
 #nav-bar {
   display: flex;
   align-items: center;
   position: absolute;
-  background-color: #00a087;
-  color: #e8fdff;
+  background-color: $banner;
+  color: $button;
   height: 80px;
   width: 100%;
   padding-top: 0;
@@ -31,8 +34,8 @@
   margin-top: 10px;
   margin-bottom: 2em;
   border-radius: 5px;
-  background-color: #e8fdff;
-  color: #00a087;
+  background-color: $button;
+  color: $banner;
   border: 1px solid black;
 }
 

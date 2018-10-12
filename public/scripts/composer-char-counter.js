@@ -1,8 +1,6 @@
-console.log('present')
-
 const maxAmt = 140;
+
 $(document).ready(function() {
-  // const $counter = $('span.counter')
   $("textarea").on('keyup', function() {
     let count;
     let total;
@@ -16,5 +14,4 @@ $(document).ready(function() {
     }
     $counter.text(total)
   });
-
 });
