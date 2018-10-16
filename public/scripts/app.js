@@ -7,7 +7,6 @@ $(document).ready(function() {
     const handle = obj.user.handle;
     const tweetContent = obj.content.text;
     const time = obj.created_at;
-    const likes = obj.likes;
 
     const format = `
                 <article class="tweet">
