@@ -81,10 +81,10 @@ $(document).ready(function() {
     const $tweetContent = $(this).serialize()
     if($tweetContent.length <= 5) {
       $('.error').css("visibility", "visible")
-      $('.error').html("Brevity is the soul of wit \nbut yours is nonexistent")
+      $('.error').html("Brevity is the soul of wit \nbut yours is nonexistent\ninput needed")
     } else if ($tweetContent.length > 140) {
       $('.error').css("visibility", "visible")
-      $('.error').html("Such grand ideas!\nToo large for here")
+      $('.error').html("Such grand ideas!\nToo large for here\ninput smaller message")
     } else {
       $.ajax('/tweets', {method: 'POST', data : $tweetContent})
         .done(function(newTweet) {
