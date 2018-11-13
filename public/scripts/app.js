@@ -7,7 +7,6 @@ $(document).ready(function() {
     const handle = obj.user.handle;
     const tweetContent = obj.content.text;
     const time = obj.created_at;
-    const likes = obj.likes;
 
     const format = `
                 <article class="tweet">
@@ -65,9 +64,6 @@ $(document).ready(function() {
 
 
   function renderTweets(tweetsArray) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
     tweetsArray.forEach(function(el) {
       $('#tweet-container').append(createTweetElement(el))
     });
@@ -95,10 +91,10 @@ $(document).ready(function() {
     const $tweetContent = $(this).serialize()
     if($tweetContent.length <= 5) {
       $('.error').css("visibility", "visible")
-      $('.error').html("Brevity is the soul of wit \nbut yours is nonexistent")
+      $('.error').html("Brevity is the soul of wit \nbut yours is nonexistent\ninput needed")
     } else if ($tweetContent.length > 140) {
       $('.error').css("visibility", "visible")
-      $('.error').html("Such grand ideas!\nToo large for here")
+      $('.error').html("Such grand ideas!\nToo large for here\ninput smaller message")
     } else {
       $.ajax('/tweets', {method: 'POST', data : $tweetContent})
         .done(function(newTweet) {
