@@ -48,19 +48,9 @@ $(document).ready(function() {
     $tweet.find('.handle').text(handle);
     $tweet.find('.content').text(tweetContent);
     $tweet.find('.time').text(time);
-    $tweet.find('.likes').text(likes);
 
     return $tweet;
   };
-
-  $('#tweet-container').on("click", ".click-for-likes", function() {
-    const liking = Number($(this).find('.likes').text())+1;
-    $(this).find('.likes').text(liking);
-
-    const time = $(this).find('.time').text(); // unique to the tweet
-    db.collection("tweets").find({created_at: time})
-
-  });
 
 
   function renderTweets(tweetsArray) {

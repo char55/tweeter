@@ -3,6 +3,7 @@
 // Basic express setup:
 
 const PORT          = process.env.PORT;
+// const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
@@ -40,5 +41,5 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     console.log("Example app listening on port " + PORT);
   });
 
-  // db.close;
+  db.close;  
 });
